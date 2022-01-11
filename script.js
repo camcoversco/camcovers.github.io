@@ -42,7 +42,7 @@ switch(myParam) {
     MODEL_PATH = "https://camcoversco.github.io/hondab.glb";
     INITIAL_MAP = [
       { childID: "engine", mtl: INITIAL_MTL },
-      { childID: "lettering", mtl: TEXT }
+      { childID: "text", mtl: TEXT }
     ]
     scale = 0.02;
     document.getElementById("oilcap").style.display = 'none';
