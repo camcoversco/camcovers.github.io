@@ -8,6 +8,9 @@ var theModel;
 
 const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get('car');
+
+document.getElementById("engines").value = myParam;
+
 let MODEL_PATH = "";
 let INITIAL_MAP = {};
 
