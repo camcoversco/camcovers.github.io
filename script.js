@@ -40,6 +40,8 @@ switch(myParam) {
       { childID: "engine", mtl: INITIAL_MTL },
       { childID: "lettering", mtl: TEXT }
     ]
+
+    document.append(`<style>.option[data-option="oilcap"] {display:none;}</style>`)
   default: 
     MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
     INITIAL_MAP = [
@@ -51,7 +53,7 @@ switch(myParam) {
 
 }
 
-
+console.log(myParam);
 
 
 
