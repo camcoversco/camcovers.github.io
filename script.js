@@ -25,7 +25,7 @@ function selectOnChange() {
   var x = document.getElementById("engines").value;
   window.location.href = `https://camcoversco.github.io?car=${x}`
 }
-
+let scale = 1;
  
 switch(myParam) {
   case "mx5":
@@ -36,6 +36,7 @@ switch(myParam) {
       { childID: "oilcapblack", mtl: PLASTIC },
       { childID: "text", mtl: TEXT }
     ]
+    scale = 1.5
     break;
   case "hondab":
     MODEL_PATH = "https://camcoversco.github.io/hondab.glb";
@@ -43,7 +44,7 @@ switch(myParam) {
       { childID: "engine", mtl: INITIAL_MTL },
       { childID: "lettering", mtl: TEXT }
     ]
-
+    scale = 0.05;
     document.getElementById("oilcap").style.display = 'none';
 
     break;
@@ -55,6 +56,7 @@ switch(myParam) {
       { childID: "oilcapblack", mtl: PLASTIC },
       { childID: "text", mtl: TEXT }
     ]
+    scale = 1.5;
 
 }
 
@@ -396,7 +398,7 @@ loader.load(MODEL_PATH, function (gltf) {
   });
 
   // Set the models initial scale   
-  theModel.scale.set(1.5, 1.5, 1.5);
+  theModel.scale.set(scale, scale, scale);
   theModel.rotation.y = Math.PI;
 
   // Offset the y position a bit
