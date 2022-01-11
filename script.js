@@ -5,6 +5,9 @@ const DRAG_NOTICE = document.getElementById('js-drag-notice');
 
 var theModel;
 
+function openinsta() {
+  window.open("https://www.instagram.com/camcovers.co/?hl=en");
+}
 
 const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get('car');
