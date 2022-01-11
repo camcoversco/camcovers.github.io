@@ -5,7 +5,55 @@ const DRAG_NOTICE = document.getElementById('js-drag-notice');
 
 var theModel;
 
-const MODEL_PATH = "https://camcoversco.github.io/test.glb";
+
+const urlParams = new URLSearchParams(window.location.search);
+const myParam = urlParams.get('car');
+let MODEL_PATH = "";
+let INITIAL_MAP = {};
+
+// Initial material
+const INITIAL_MTL = new THREE.MeshPhongMaterial({ color: 0x090909, shininess: 50 });
+const INITIAL_ML = new THREE.MeshPhongMaterial({ color: 000000, shininess: 50 });
+
+const PLASTIC = new THREE.MeshPhongMaterial({ color: 000000, shininess: 5 });
+const TEXT = new THREE.MeshPhongMaterial({ color: 0xFFFFFF, shininess: 50 });
+
+function selectOnChange() {
+  var x = document.getElementById("engines").value;
+  window.location.href = `https://camcoversco.github.io?car=${x}`
+}
+
+ 
+switch(myParam) {
+  case "mx5":
+    MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
+    INITIAL_MAP = [
+      { childID: "engine", mtl: INITIAL_MTL },
+      { childID: "oilcap", mtl: TEXT },
+      { childID: "oilcapblack", mtl: PLASTIC },
+      { childID: "text", mtl: TEXT }
+    ]
+    break;
+  case "hondab":
+    MODEL_PATH = "https://camcoversco.github.io/hondab.glb";
+    INITIAL_MAP = [
+      { childID: "engine", mtl: INITIAL_MTL },
+      { childID: "lettering", mtl: TEXT }
+    ]
+  default: 
+    MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
+    INITIAL_MAP = [
+      { childID: "engine", mtl: INITIAL_MTL },
+      { childID: "oilcap", mtl: TEXT },
+      { childID: "oilcapblack", mtl: PLASTIC },
+      { childID: "text", mtl: TEXT }
+    ]
+
+}
+
+
+
+
 
 var activeOption = 'engine';
 var loaded = false;
@@ -324,20 +372,6 @@ camera.position.z = cameraFar;
 camera.position.x = 0;
 camera.position.y = camera.position.y + 3;
 
-// Initial material
-const INITIAL_MTL = new THREE.MeshPhongMaterial({ color: 0x090909, shininess: 50 });
-const INITIAL_ML = new THREE.MeshPhongMaterial({ color: 000000, shininess: 50 });
-
-const PLASTIC = new THREE.MeshPhongMaterial({ color: 000000, shininess: 5 });
-const TEXT = new THREE.MeshPhongMaterial({ color: 0xFFFFFF, shininess: 50 });
-
-const INITIAL_MAP = [
-  { childID: "engine", mtl: INITIAL_MTL },
-  { childID: "oilcap", mtl: TEXT },
-  { childID: "oilcapblack", mtl: PLASTIC },
-  { childID: "text", mtl: TEXT }
-
-]
 
 
 
