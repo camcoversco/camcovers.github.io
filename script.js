@@ -44,7 +44,9 @@ switch(myParam) {
       { childID: "lettering", mtl: TEXT }
     ]
 
-    document.body.append(`<style>.option[data-option="oilcap"] {display:none;}</style>`)
+    ddocument.getElementById("oilcap").style.display = 'none';
+
+    break;
   default: 
     MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
     INITIAL_MAP = [
