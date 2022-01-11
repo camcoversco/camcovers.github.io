@@ -40,6 +40,255 @@ const colors = [
   },
   {
     shininess: 100, color: 'ADD8E6' //light bluew
+  },
+  {
+    shininess: 100,
+    color: '131417'
+  },
+
+  {
+    shininess: 100,
+    color: '374047'
+  },
+
+  {
+    shininess: 100,
+    color: '5f6e78'
+  },
+
+  {
+    shininess: 100,
+    color: '7f8a93'
+  },
+
+  {
+    shininess: 100,
+    color: '97a1a7'
+  },
+
+  {
+    shininess: 100,
+    color: 'acb4b9'
+  },
+
+  {
+    shininess: 100,
+    color: 'DF9998'
+  },
+
+  {
+    shininess: 100,
+    color: '7C6862'
+  },
+
+  {
+    shininess: 100,
+    color: 'A3AB84'
+  },
+
+  {
+    shininess: 100,
+    color: 'D6CCB1'
+  },
+
+  {
+    shininess: 100,
+    color: 'F8D5C4'
+  },
+
+  {
+    shininess: 100,
+    color: 'A3AE99'
+  },
+
+  {
+    shininess: 100,
+    color: 'EFF2F2'
+  },
+
+  {
+    shininess: 100,
+    color: 'B0C5C1'
+  },
+
+  {
+    shininess: 100,
+    color: '8B8C8C'
+  },
+
+  {
+    shininess: 100,
+    color: '565F59'
+  },
+
+  {
+    shininess: 100,
+    color: 'CB304A'
+  },
+
+  {
+    shininess: 100,
+    color: 'FED7C8'
+  },
+
+  {
+    shininess: 100,
+    color: 'C7BDBD'
+  },
+
+  {
+    shininess: 100,
+    color: '3DCBBE'
+  },
+
+  {
+    shininess: 100,
+    color: '264B4F'
+  },
+
+  {
+    shininess: 100,
+    color: '389389'
+  },
+
+  {
+    shininess: 100,
+    color: '85BEAE'
+  },
+
+  {
+    shininess: 100,
+    color: 'F2DABA'
+  },
+
+  {
+    shininess: 100,
+    color: 'F2A97F'
+  },
+
+  {
+    shininess: 100,
+    color: 'D85F52'
+  },
+
+  {
+    shininess: 100,
+    color: 'D92E37'
+  },
+
+  {
+    shininess: 100,
+    color: 'FC9736'
+  },
+
+  {
+    shininess: 100,
+    color: 'F7BD69'
+  },
+
+  {
+    shininess: 100,
+    color: 'A4D09C'
+  },
+
+  {
+    shininess: 100,
+    color: '4C8A67'
+  },
+
+  {
+    shininess: 100,
+    color: '25608A'
+  },
+
+  {
+    shininess: 100,
+    color: '75C8C6'
+  },
+
+  {
+    shininess: 100,
+    color: 'F5E4B7'
+  },
+
+  {
+    shininess: 100,
+    color: 'E69041'
+  },
+
+  {
+    shininess: 100,
+    color: 'E56013'
+  },
+
+  {
+    shininess: 100,
+    color: '11101D'
+  },
+
+  {
+    shininess: 100,
+    color: '630609'
+  },
+
+  {
+    shininess: 100,
+    color: 'C9240E'
+  },
+
+  {
+    shininess: 100,
+    color: 'EC4B17'
+  },
+
+  {
+    shininess: 100,
+    color: '281A1C'
+  },
+
+  {
+    shininess: 100,
+    color: '4F556F'
+  },
+
+  {
+    shininess: 100,
+    color: '64739B'
+  },
+
+  {
+    shininess: 100,
+    color: 'CDBAC7'
+  },
+
+  {
+    shininess: 100,
+    color: '946F43'
+  },
+
+  {
+    shininess: 100,
+    color: '66533C'
+  },
+
+  {
+    shininess: 100,
+    color: '173A2F'
+  },
+
+  {
+    shininess: 100,
+    color: '153944'
+  },
+
+  {
+    shininess: 100,
+    color: '27548D'
+  },
+
+  {
+    shininess: 100,
+    color: '438AAC'
   }
 ];
 
