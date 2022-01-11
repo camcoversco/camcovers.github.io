@@ -44,7 +44,7 @@ switch(myParam) {
       { childID: "lettering", mtl: TEXT }
     ]
 
-    ddocument.getElementById("oilcap").style.display = 'none';
+    document.getElementById("oilcap").style.display = 'none';
 
     break;
   default: 
