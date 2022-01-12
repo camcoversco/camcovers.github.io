@@ -16,6 +16,7 @@
 
 .topcorner>span {
     font-size: 15px;
+    cursor: pointer;
 }
 
 .logo-container {
