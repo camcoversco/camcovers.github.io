@@ -28,6 +28,7 @@ function selectOnChange() {
   var x = document.getElementById("engines").value;
   window.location.href = `https://camcoversco.github.io?car=${x}`
 }
+
 let scale = 1;
  
 switch(myParam) {
@@ -681,3 +682,13 @@ function slide(wrapper, items) {
 }
 
 slide(slider, sliderItems);
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
