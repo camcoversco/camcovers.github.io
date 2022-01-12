@@ -9,8 +9,13 @@
 .topcorner{
     position:absolute;
     top:0;
-    right:0;
+    padding: 20px;
+    nav-left:0;
     z-index: 1000;
+   }
+
+   .topcorner > span {
+       font-size: 15px;
    }
 
 .logo-container {
