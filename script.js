@@ -55,7 +55,7 @@ switch(myParam) {
       { childID: "engine", mtl: INITIAL_MTL },
       { childID: "text", mtl: TEXT }
     ]
-    scale = 0.02;
+    scale = 0.04;
     document.getElementById("oilcap").style.display = 'none';
 
     break;
