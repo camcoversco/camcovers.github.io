@@ -124,18 +124,13 @@ html {
     border-right: solid 3px transparent;
 }
 
-.option:hover {
-
-}
 
 .option.--is-active {
     border-right: 3px solid rgb(0, 0, 0);
     cursor: default;
 }
 
-.option.--is-active:hover {
 
-}
 
 .option img {
     height: 100%;
