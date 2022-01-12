@@ -234,7 +234,7 @@ html {
 
 @media (max-width: 960px) {
     .options {
-        top: 0;
+        top: 15%;
     }
 
     .option > span {
