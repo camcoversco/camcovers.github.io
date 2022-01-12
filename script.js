@@ -48,6 +48,15 @@ switch(myParam) {
     ]
     scale = 0.02;
     document.getElementById("oilcap").style.display = 'none';
+    break;
+  case "cosworth":
+    MODEL_PATH = "https://camcoversco.github.io/cos.glb";
+    INITIAL_MAP = [
+      { childID: "engine", mtl: INITIAL_MTL },
+      { childID: "text", mtl: TEXT }
+    ]
+    scale = 0.02;
+    document.getElementById("oilcap").style.display = 'none';
 
     break;
   default: 
