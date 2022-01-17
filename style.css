@@ -328,6 +328,27 @@ html {
     }
 }
 
+.amazon-links {
+    position: absolute;
+    right: 0;
+    
+}
+
+.amazon-links > ul {
+    list-style: none;
+}
+
+.amazon-links > ul > li {
+    background: rgb(203, 48, 74);
+    padding: 10px 20px 10px 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.amazon-links > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
 
 /* The side navigation menu */
 .sidenav {
