@@ -34,7 +34,7 @@ switch(myParam) {
     $(".amazon-links > ul").append(`<li><a href="https://geni.us/DressUpBolts">Dress Up Kit (Amazon)</a></li>`)
     $(".amazon-links  > ul").append(`<li><a href="https://geni.us/qEpj">Oil Cap (Amazon)</a></li>`)
     $(".amazon-links > ul").append(`<li><a href="https://geni.us/BXgAo">Hoses (Amazon)</a></li>`)
-
+    $(".amazon-links > ul").append(`<li><a href="https://geni.us/TowHook">Tow Hook (Amazon)</a></li>`)
     MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
     INITIAL_MAP = [
       { childID: "engine", mtl: INITIAL_MTL },
@@ -45,6 +45,7 @@ switch(myParam) {
     scale = 1.5
     break;
   case "hondab":
+    $(".amazon-links > ul").append(`<li><a href="https://geni.us/TowHook">Tow Hook (Amazon)</a></li>`)
     MODEL_PATH = "https://camcoversco.github.io/hondab.glb";
     INITIAL_MAP = [
       { childID: "engine", mtl: INITIAL_MTL },
@@ -67,6 +68,7 @@ switch(myParam) {
   $(".amazon-links > ul").append(`<li><a href="https://geni.us/DressUpBolts">Dress Up Kit (Amazon)</a></li>`)
   $(".amazon-links > ul").append(`<li><a href="https://geni.us/qEpj">Oil Cap (Amazon)</a></li>`)
   $(".amazon-links > ul").append(`<li><a href="https://geni.us/BXgAo">Hoses (Amazon)</a></li>`)
+  $(".amazon-links > ul").append(`<li><a href="https://geni.us/TowHook">Tow Hook (Amazon)</a></li>`)
 
     MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
     INITIAL_MAP = [
