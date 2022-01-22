@@ -320,7 +320,7 @@ switch(myParam) {
     $(".amazon-links > ul").append(`<li><a href="https://geni.us/TowHook">Tow Hook (Amazon)</a></li>`)
     MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
     INITIAL_MAP = [
-      { childID: "engine", mtl: colors[Math.floor(Math.random()*colors.length)] },
+      { childID: "engine", mtl: new THREE.MeshPhongMaterial(colors[Math.floor(Math.random()*colors.length)]) },
       { childID: "oilcap", mtl: TEXT },
       { childID: "oilcapblack", mtl: PLASTIC },
       { childID: "text", mtl: TEXT }
@@ -355,7 +355,7 @@ switch(myParam) {
 
     MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
     INITIAL_MAP = [
-      { childID: "engine", mtl: colors[Math.floor(Math.random()*colors.length)] },
+      { childID: "engine", mtl: new THREE.MeshPhongMaterial(colors[Math.floor(Math.random()*colors.length)]) },
       { childID: "oilcap", mtl: TEXT },
       { childID: "oilcapblack", mtl: PLASTIC },
       { childID: "text", mtl: TEXT }
