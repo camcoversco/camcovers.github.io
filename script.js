@@ -321,7 +321,7 @@ switch (myParam) {
     MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
 
     let randomColour = colors[Math.floor(Math.random() * colors.length)];
-    randomColour.color = "0x" + randomColour.color;
+    randomColour.color =  parseInt("0x" + randomColour.color);
     INITIAL_MAP = [
       { childID: "engine", mtl: new THREE.MeshPhongMaterial(randomColour) },
       { childID: "oilcap", mtl: TEXT },
@@ -356,11 +356,12 @@ switch (myParam) {
     $(".amazon-links > ul").append(`<li><a href="https://geni.us/BXgAo">Hoses (Amazon)</a></li>`)
     $(".amazon-links > ul").append(`<li><a href="https://geni.us/TowHook">Tow Hook (Amazon)</a></li>`)
 
-    let randomColour1 = colors[Math.floor(Math.random() * colors.length)];
-    randomColour1.color = "0x" + randomColour1.color;
+
     MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
+    let randomColour1 = colors[Math.floor(Math.random() * colors.length)];
+    randomColour1.color =  parseInt("0x" + randomColour1.color);
     INITIAL_MAP = [
-      { childID: "engine", mtl: new THREE.MeshPhongMaterial(colors[Math.floor(Math.random() * colors.length)]) },
+      { childID: "engine", mtl: new THREE.MeshPhongMaterial(randomColour1) },
       { childID: "oilcap", mtl: TEXT },
       { childID: "oilcapblack", mtl: PLASTIC },
       { childID: "text", mtl: TEXT }
