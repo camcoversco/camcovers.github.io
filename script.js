@@ -311,8 +311,8 @@ function selectOnChange() {
 }
 
 let scale = 1;
- 
-switch(myParam) {
+
+switch (myParam) {
   case "mx5":
     $(".amazon-links > ul").append(`<li><a href="https://geni.us/DressUpBolts">Dress Up Kit (Amazon)</a></li>`)
     $(".amazon-links  > ul").append(`<li><a href="https://geni.us/qEpj">Oil Cap (Amazon)</a></li>`)
@@ -321,7 +321,7 @@ switch(myParam) {
     MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
 
     let randomColour = colors[Math.floor(Math.random() * colors.length)];
-    console.log(randomColour);
+    randomColour.color = "0x" + randomColour.color;
     INITIAL_MAP = [
       { childID: "engine", mtl: new THREE.MeshPhongMaterial(randomColour) },
       { childID: "oilcap", mtl: TEXT },
@@ -350,15 +350,17 @@ switch(myParam) {
     document.getElementById("oilcap").style.display = 'none';
 
     break;
-  default: 
-  $(".amazon-links > ul").append(`<li><a href="https://geni.us/DressUpBolts">Dress Up Kit (Amazon)</a></li>`)
-  $(".amazon-links > ul").append(`<li><a href="https://geni.us/qEpj">Oil Cap (Amazon)</a></li>`)
-  $(".amazon-links > ul").append(`<li><a href="https://geni.us/BXgAo">Hoses (Amazon)</a></li>`)
-  $(".amazon-links > ul").append(`<li><a href="https://geni.us/TowHook">Tow Hook (Amazon)</a></li>`)
+  default:
+    $(".amazon-links > ul").append(`<li><a href="https://geni.us/DressUpBolts">Dress Up Kit (Amazon)</a></li>`)
+    $(".amazon-links > ul").append(`<li><a href="https://geni.us/qEpj">Oil Cap (Amazon)</a></li>`)
+    $(".amazon-links > ul").append(`<li><a href="https://geni.us/BXgAo">Hoses (Amazon)</a></li>`)
+    $(".amazon-links > ul").append(`<li><a href="https://geni.us/TowHook">Tow Hook (Amazon)</a></li>`)
 
+    let randomColour = colors[Math.floor(Math.random() * colors.length)];
+    randomColour.color = "0x" + randomColour.color;
     MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
     INITIAL_MAP = [
-      { childID: "engine", mtl: new THREE.MeshPhongMaterial(colors[Math.floor(Math.random()*colors.length)]) },
+      { childID: "engine", mtl: new THREE.MeshPhongMaterial(colors[Math.floor(Math.random() * colors.length)]) },
       { childID: "oilcap", mtl: TEXT },
       { childID: "oilcapblack", mtl: PLASTIC },
       { childID: "text", mtl: TEXT }
