@@ -3,90 +3,6 @@ const LOADER = document.getElementById('js-loader');
 const TRAY = document.getElementById('js-tray-slide');
 const DRAG_NOTICE = document.getElementById('js-drag-notice');
 
-var theModel;
-
-function openinsta() {
-  window.open("https://www.instagram.com/camcovers.co/?hl=en");
-}
-
-const urlParams = new URLSearchParams(window.location.search);
-const myParam = urlParams.get('car');
-
-let MODEL_PATH = "";
-let INITIAL_MAP = {};
-
-// Initial material
-const INITIAL_MTL = new THREE.MeshPhongMaterial({ color: 0x090909, shininess: 50 });
-const INITIAL_ML = new THREE.MeshPhongMaterial({ color: 000000, shininess: 50 });
-
-const PLASTIC = new THREE.MeshPhongMaterial({ color: 000000, shininess: 5 });
-const TEXT = new THREE.MeshPhongMaterial({ color: 0xFFFFFF, shininess: 50 });
-
-function selectOnChange() {
-  var x = document.getElementById("engines").value;
-  window.location.href = `https://camcoversco.github.io?car=${x}`
-}
-
-let scale = 1;
- 
-switch(myParam) {
-  case "mx5":
-    $(".amazon-links > ul").append(`<li><a href="https://geni.us/DressUpBolts">Dress Up Kit (Amazon)</a></li>`)
-    $(".amazon-links  > ul").append(`<li><a href="https://geni.us/qEpj">Oil Cap (Amazon)</a></li>`)
-    $(".amazon-links > ul").append(`<li><a href="https://geni.us/BXgAo">Hoses (Amazon)</a></li>`)
-    $(".amazon-links > ul").append(`<li><a href="https://geni.us/TowHook">Tow Hook (Amazon)</a></li>`)
-    MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
-    INITIAL_MAP = [
-      { childID: "engine", mtl: INITIAL_MTL },
-      { childID: "oilcap", mtl: TEXT },
-      { childID: "oilcapblack", mtl: PLASTIC },
-      { childID: "text", mtl: TEXT }
-    ]
-    scale = 1.5
-    break;
-  case "hondab":
-    $(".amazon-links > ul").append(`<li><a href="https://geni.us/TowHook">Tow Hook (Amazon)</a></li>`)
-    MODEL_PATH = "https://camcoversco.github.io/hondab.glb";
-    INITIAL_MAP = [
-      { childID: "engine", mtl: INITIAL_MTL },
-      { childID: "text", mtl: TEXT }
-    ]
-    scale = 0.02;
-    document.getElementById("oilcap").style.display = 'none';
-    break;
-  case "cosworth":
-    MODEL_PATH = "https://camcoversco.github.io/cos.glb";
-    INITIAL_MAP = [
-      { childID: "engine", mtl: INITIAL_MTL },
-      { childID: "text", mtl: TEXT }
-    ]
-    scale = 0.04;
-    document.getElementById("oilcap").style.display = 'none';
-
-    break;
-  default: 
-  $(".amazon-links > ul").append(`<li><a href="https://geni.us/DressUpBolts">Dress Up Kit (Amazon)</a></li>`)
-  $(".amazon-links > ul").append(`<li><a href="https://geni.us/qEpj">Oil Cap (Amazon)</a></li>`)
-  $(".amazon-links > ul").append(`<li><a href="https://geni.us/BXgAo">Hoses (Amazon)</a></li>`)
-  $(".amazon-links > ul").append(`<li><a href="https://geni.us/TowHook">Tow Hook (Amazon)</a></li>`)
-
-    MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
-    INITIAL_MAP = [
-      { childID: "engine", mtl: INITIAL_MTL },
-      { childID: "oilcap", mtl: TEXT },
-      { childID: "oilcapblack", mtl: PLASTIC },
-      { childID: "text", mtl: TEXT }
-    ]
-    scale = 1.5;
-
-}
-
-console.log(myParam);
-
-
-
-var activeOption = 'engine';
-var loaded = false;
 
 const colors = [
   {
@@ -369,6 +285,92 @@ const colors = [
     color: '438AAC'
   }
 ];
+
+var theModel;
+
+function openinsta() {
+  window.open("https://www.instagram.com/camcovers.co/?hl=en");
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+const myParam = urlParams.get('car');
+
+let MODEL_PATH = "";
+let INITIAL_MAP = {};
+
+// Initial material
+const INITIAL_MTL = new THREE.MeshPhongMaterial({ color: 0x090909, shininess: 50 });
+const INITIAL_ML = new THREE.MeshPhongMaterial({ color: 000000, shininess: 50 });
+
+const PLASTIC = new THREE.MeshPhongMaterial({ color: 000000, shininess: 5 });
+const TEXT = new THREE.MeshPhongMaterial({ color: 0xFFFFFF, shininess: 50 });
+
+function selectOnChange() {
+  var x = document.getElementById("engines").value;
+  window.location.href = `https://camcoversco.github.io?car=${x}`
+}
+
+let scale = 1;
+ 
+switch(myParam) {
+  case "mx5":
+    $(".amazon-links > ul").append(`<li><a href="https://geni.us/DressUpBolts">Dress Up Kit (Amazon)</a></li>`)
+    $(".amazon-links  > ul").append(`<li><a href="https://geni.us/qEpj">Oil Cap (Amazon)</a></li>`)
+    $(".amazon-links > ul").append(`<li><a href="https://geni.us/BXgAo">Hoses (Amazon)</a></li>`)
+    $(".amazon-links > ul").append(`<li><a href="https://geni.us/TowHook">Tow Hook (Amazon)</a></li>`)
+    MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
+    INITIAL_MAP = [
+      { childID: "engine", mtl: colors[Math.floor(Math.random()*colors.length)] },
+      { childID: "oilcap", mtl: TEXT },
+      { childID: "oilcapblack", mtl: PLASTIC },
+      { childID: "text", mtl: TEXT }
+    ]
+    scale = 1.5
+    break;
+  case "hondab":
+    $(".amazon-links > ul").append(`<li><a href="https://geni.us/TowHook">Tow Hook (Amazon)</a></li>`)
+    MODEL_PATH = "https://camcoversco.github.io/hondab.glb";
+    INITIAL_MAP = [
+      { childID: "engine", mtl: INITIAL_MTL },
+      { childID: "text", mtl: TEXT }
+    ]
+    scale = 0.02;
+    document.getElementById("oilcap").style.display = 'none';
+    break;
+  case "cosworth":
+    MODEL_PATH = "https://camcoversco.github.io/cos.glb";
+    INITIAL_MAP = [
+      { childID: "engine", mtl: INITIAL_MTL },
+      { childID: "text", mtl: TEXT }
+    ]
+    scale = 0.04;
+    document.getElementById("oilcap").style.display = 'none';
+
+    break;
+  default: 
+  $(".amazon-links > ul").append(`<li><a href="https://geni.us/DressUpBolts">Dress Up Kit (Amazon)</a></li>`)
+  $(".amazon-links > ul").append(`<li><a href="https://geni.us/qEpj">Oil Cap (Amazon)</a></li>`)
+  $(".amazon-links > ul").append(`<li><a href="https://geni.us/BXgAo">Hoses (Amazon)</a></li>`)
+  $(".amazon-links > ul").append(`<li><a href="https://geni.us/TowHook">Tow Hook (Amazon)</a></li>`)
+
+    MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
+    INITIAL_MAP = [
+      { childID: "engine", mtl: colors[Math.floor(Math.random()*colors.length)] },
+      { childID: "oilcap", mtl: TEXT },
+      { childID: "oilcapblack", mtl: PLASTIC },
+      { childID: "text", mtl: TEXT }
+    ]
+    scale = 1.5;
+
+}
+
+console.log(myParam);
+
+
+
+var activeOption = 'engine';
+var loaded = false;
+
 
 
 
