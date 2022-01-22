@@ -319,8 +319,11 @@ switch(myParam) {
     $(".amazon-links > ul").append(`<li><a href="https://geni.us/BXgAo">Hoses (Amazon)</a></li>`)
     $(".amazon-links > ul").append(`<li><a href="https://geni.us/TowHook">Tow Hook (Amazon)</a></li>`)
     MODEL_PATH = "https://camcoversco.github.io/mx5.glb";
+
+    let randomColour = colors[Math.floor(Math.random() * colors.length)];
+    console.log(randomColour);
     INITIAL_MAP = [
-      { childID: "engine", mtl: new THREE.MeshPhongMaterial(colors[Math.floor(Math.random()*colors.length)]) },
+      { childID: "engine", mtl: new THREE.MeshPhongMaterial(randomColour) },
       { childID: "oilcap", mtl: TEXT },
       { childID: "oilcapblack", mtl: PLASTIC },
       { childID: "text", mtl: TEXT }
